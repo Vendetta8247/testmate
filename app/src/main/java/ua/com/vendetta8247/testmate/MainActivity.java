@@ -1,11 +1,14 @@
 package ua.com.vendetta8247.testmate;
 
+        import android.content.DialogInterface;
         import android.graphics.Color;
         import android.os.Bundle;
         import android.os.Environment;
         import android.support.v7.app.AlertDialog;
         import android.support.v7.app.AppCompatActivity;
+        import android.text.InputType;
         import android.view.View;
+        import android.widget.EditText;
         import android.widget.TextView;
 
         import java.io.File;
@@ -16,13 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
     private RichEditor mEditor;
     private TextView mPreview;
-    String htmlOutput;
+    String htmlOutput="";
+    String m_text = "";
+
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         mEditor = (RichEditor) findViewById(R.id.editor);
-        mEditor.setEditorHeight(400);
+       // mEditor.setEditorHeight(600);
         mEditor.setEditorFontSize(22);
         mEditor.setEditorFontColor(R.color.blackFont);
         //mEditor.setEditorBackgroundColor(Color.BLUE);
@@ -32,10 +38,13 @@ public class MainActivity extends AppCompatActivity {
         //    mEditor.setBackground("https://raw.githubusercontent.com/wasabeef/art/master/chip.jpg");
         mEditor.setPlaceholder("Insert text here...");
 
-        mPreview = (TextView) findViewById(R.id.preview);
+        if(getIntent().getStringExtra("content") !=null)
+            mEditor.setHtml(getIntent().getStringExtra("content"));
+
+       // mPreview = (TextView) findViewById(R.id.preview);
         mEditor.setOnTextChangeListener(new RichEditor.OnTextChangeListener() {
             @Override public void onTextChange(String text) {
-                mPreview.setText(text);
+          //      mPreview.setText(text);
                 htmlOutput = new String(text);
             }
         });
@@ -193,25 +202,77 @@ public class MainActivity extends AppCompatActivity {
         });
         findViewById(R.id.action_save).setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
+                System.out.println(m_text.length());
 
-                File sdCard = Environment.getExternalStorageDirectory();
-                File dir = new File (sdCard.getAbsolutePath() + "/TestMate");
-                dir.mkdirs();
-
+                if (m_text.length() == 0) {
 
 
-                File f = new File(sdCard.getAbsolutePath() + "/TestMate/test.html");
-                System.out.println(sdCard.getAbsolutePath() + "/TestMate/test.html");
-                try {
-                    FileWriter fw = new FileWriter(f);
-                    fw.write(htmlOutput);
-                    fw.flush();
-                    fw.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
+                    builder.setTitle("File name");
+
+
+                    final EditText input = new EditText(v.getContext());
+                    input.setInputType(InputType.TYPE_CLASS_TEXT);
+                    builder.setView(input);
+
+                    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            m_text = input.getText().toString();
+
+                            File sdCard = Environment.getExternalStorageDirectory();
+                            File dir = new File(sdCard.getAbsolutePath() + "/TestMate");
+                            if (!dir.exists())
+                                dir.mkdirs();
+                            File f = new File(sdCard.getAbsolutePath() + "/TestMate/" + m_text);
+                            System.out.println(sdCard.getAbsolutePath() + "/TestMate/" + m_text);
+                            try {
+                                if (htmlOutput.length() != 0) {
+                                    FileWriter fw = new FileWriter(f);
+                                    fw.write(htmlOutput);
+                                    fw.flush();
+                                    fw.close();
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+
+                    builder.show();
+
+
                 }
 
+                else
+                {
+                    File sdCard = Environment.getExternalStorageDirectory();
+                    File dir = new File(sdCard.getAbsolutePath() + "/TestMate");
+                    if (!dir.exists())
+                        dir.mkdirs();
+                    File f = new File(sdCard.getAbsolutePath() + "/TestMate/" + m_text);
+                    System.out.println(sdCard.getAbsolutePath() + "/TestMate/" + m_text);
+                    try {
+                        if (htmlOutput.length() != 0) {
+                            FileWriter fw = new FileWriter(f);
+                            fw.write(htmlOutput);
+                            fw.flush();
+                            fw.close();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
+
+
+
         });
     }
 }

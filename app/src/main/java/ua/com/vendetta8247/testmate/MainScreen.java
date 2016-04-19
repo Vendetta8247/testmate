@@ -8,9 +8,11 @@ import android.os.Environment;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
@@ -21,6 +23,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class MainScreen extends AppCompatActivity {
 
@@ -32,19 +35,7 @@ public class MainScreen extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        RecyclerView rw = (RecyclerView) findViewById(R.id.contentList);
 
-        rw.setAdapter(adapter);
-            File sdCard = Environment.getExternalStorageDirectory();
-            File dir = new File(sdCard.getAbsolutePath() + "/TestMate");
-            if (!dir.exists())
-                dir.mkdir();
-            for (int i = 0; i < dir.listFiles().length; i++)
-                adapter.addItem(new MainCard1(dir.listFiles()[i].getName()));
-
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        rw.setLayoutManager(llm);
 
 
 
@@ -58,6 +49,27 @@ public class MainScreen extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        RecyclerView rw = (RecyclerView) findViewById(R.id.contentList);
+
+
+
+        rw.setAdapter(adapter);
+
+        adapter.clearList();
+        File sdCard = Environment.getExternalStorageDirectory();
+        File dir = new File(sdCard.getAbsolutePath() + "/TestMate");
+        if (!dir.exists())
+            dir.mkdir();
+        for (int i = 0; i < dir.listFiles().length; i++)
+            adapter.addItem(new MainCard1(dir.listFiles()[i].getName(), dir.listFiles()[i].getAbsolutePath()));
+
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        rw.setLayoutManager(llm);
+    }
 }
 
 
@@ -75,6 +87,7 @@ class MainScreenAdapter extends RecyclerView.Adapter<MainScreenAdapter.SuperView
         MainCard1 card = cardList.get(position);
         MainScreenItemViewHolder newHolder = (MainScreenItemViewHolder) holder;
         newHolder.headerText.setText(card.headerText);
+        newHolder.filePath = card.filePath;
     }
 
     @Override
@@ -86,7 +99,12 @@ class MainScreenAdapter extends RecyclerView.Adapter<MainScreenAdapter.SuperView
     {
         cardList.add(card);
         notifyItemInserted(cardList.size()-1);
+    }
 
+    public void clearList()
+    {
+        cardList.clear();
+        notifyDataSetChanged();
     }
 
     @Override
@@ -102,11 +120,50 @@ class MainScreenAdapter extends RecyclerView.Adapter<MainScreenAdapter.SuperView
     {
         protected TextView headerText;
         public Context context;
-        public MainScreenItemViewHolder(View v, Context context)
+        public String filePath;
+        private String content;
+        public MainScreenItemViewHolder(View v, final Context context)
         {
             super(v, context);
             this.context = context;
             headerText = (TextView) v.findViewById(R.id.header_text_main_1);
+
+            v.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v2, MotionEvent event) {
+                    switch (event.getAction()) {
+                        case MotionEvent.ACTION_DOWN: {
+                            CardView view = (CardView) v2;
+                            view.setCardBackgroundColor(0xFFF0F0F0);
+                            v2.invalidate();
+                            break;
+                        }
+                        case MotionEvent.ACTION_UP: {
+                            Intent intent = new
+                                    Intent(v2.getContext(), MainActivity.class);
+                            try {
+                                content = new Scanner(new File(filePath)).useDelimiter("\\Z").next();
+                            }
+                            catch(FileNotFoundException ex)
+                            {
+                                content = "File not found";
+                                content += ex.getMessage();
+                            }
+                            intent.putExtra("content", content);
+                            //System.out.println(articleUrl);
+                            //intent.putExtra("title", TITLE);
+                            v2.getContext().startActivity(intent);
+                        }
+                        case MotionEvent.ACTION_CANCEL: {
+                            CardView view = (CardView) v2;
+                            view.setCardBackgroundColor(0xFFFFFFFF);
+                            view.invalidate();
+                            break;
+                        }
+                    }
+                    return true;
+                }
+            });
 
         }
     }
@@ -115,6 +172,7 @@ class MainScreenAdapter extends RecyclerView.Adapter<MainScreenAdapter.SuperView
     {
         public SuperViewHolder(View v, Context context) {
             super(v);
+
         }
     }
 }
@@ -122,10 +180,12 @@ class MainScreenAdapter extends RecyclerView.Adapter<MainScreenAdapter.SuperView
 
 class MainCard1{
     public String headerText;
+    public String filePath;
 
-    public MainCard1(String headerText)
+    public MainCard1(String headerText, String filePath)
     {
         this.headerText = headerText;
+        this.filePath = filePath;
 
     }
 }
