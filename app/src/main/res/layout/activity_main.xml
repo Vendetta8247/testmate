@@ -82,6 +82,29 @@
                     />
 
                 <ImageButton
+                    android:padding = "4dp"
+                    android:id="@+id/action_underline"
+                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/underline"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    />
+
+                <ImageButton
+                    android:padding = "4dp"
+                    android:id="@+id/action_strikethrough"
+                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/strikethrough"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    />
+
+
+                <ImageButton
  android:padding = "4dp"
                     android:id="@+id/action_subscript"
                     android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
@@ -103,27 +126,6 @@
                     android:scaleType="fitCenter"
                     />
 
-                <ImageButton
- android:padding = "4dp"
-                    android:id="@+id/action_strikethrough"
-                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:contentDescription="@null"
-                    android:src="@drawable/strikethrough"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    />
-
-                <ImageButton
- android:padding = "4dp"
-                    android:id="@+id/action_underline"
-                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:contentDescription="@null"
-                    android:src="@drawable/underline"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    />
 
                 <ImageButton
  android:padding = "4dp"
@@ -268,18 +270,6 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
                     />
-
-                <ImageButton
- android:padding = "4dp"
-                    android:id="@+id/action_blockquote"
-                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:contentDescription="@null"
-                    android:src="@drawable/blockquote"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    />
-
                 <ImageButton
  android:padding = "4dp"
                     android:id="@+id/action_insert_image"

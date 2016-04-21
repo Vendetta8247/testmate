@@ -182,12 +182,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.action_blockquote).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                mEditor.setBlockquote();
-            }
-        });
-
         findViewById(R.id.action_insert_image).setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
 
