@@ -1,42 +1,24 @@
-buildscript {
-repositories {
-    mavenCentral()
-}
+apply plugin: 'com.android.library'
+
 dependencies {
-    classpath 'com.android.tools.build:gradle:2.0.0'}
- }
-
-
-  apply plugin: 'android-library'
-
-repositories {
-mavenCentral()
+    compile ('com.android.support:appcompat-v7:22.2.1')
+            {exclude module: 'android.support.v4.hardware.display.*'}
 }
 
 android {
-compileSdkVersion 22
-buildToolsVersion "23.0.2"
+    compileSdkVersion 22
+    buildToolsVersion "23.0.2"
 
-defaultConfig {
-    minSdkVersion 10
-    targetSdkVersion 18
-}
-
-sourceSets {
-    main {
-        manifest.srcFile 'AndroidManifest.xml'
-        java.srcDirs = ['src']
-        resources.srcDirs = ['src']
-        aidl.srcDirs = ['src']
-        renderscript.srcDirs = ['src']
-        res.srcDirs = ['res']
-        assets.srcDirs = ['assets']
+    defaultConfig {
+        minSdkVersion 18
+        targetSdkVersion 22
     }
 
-}
-   }
-dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile "com.android.support:support-v4:22.2.1"
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+        }
+    }
 }

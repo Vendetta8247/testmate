@@ -1,23 +1,23 @@
 [
     {
-        "outputFile": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\res\\merged\\release\\values-it\\values-it.xml",
+        "outputFile": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\res\\merged\\release\\values-it\\values-it.xml",
         "map": [
             {
                 "to": {
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endColumn": 59,
-                    "endOffset": 110
+                    "endColumn": 108,
+                    "endOffset": 159
                 },
                 "from": {
-                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\res\\values-it\\strings.xml",
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
                     "position": {
-                        "startLine": 5,
-                        "startColumn": 2,
-                        "startOffset": 240,
-                        "endColumn": 57,
-                        "endOffset": 295
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 291,
+                        "endColumn": 108,
+                        "endOffset": 395
                     }
                 }
             },
@@ -25,18 +25,18 @@
                 "to": {
                     "startLine": 3,
                     "startColumn": 4,
-                    "startOffset": 115,
-                    "endColumn": 59,
-                    "endOffset": 170
+                    "startOffset": 164,
+                    "endColumn": 99,
+                    "endOffset": 259
                 },
                 "from": {
-                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\res\\values-it\\strings.xml",
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
                     "position": {
-                        "startLine": 3,
-                        "startColumn": 2,
-                        "startOffset": 85,
-                        "endColumn": 57,
-                        "endOffset": 140
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 400,
+                        "endColumn": 99,
+                        "endOffset": 495
                     }
                 }
             },
@@ -44,18 +44,18 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 175,
-                    "endColumn": 79,
-                    "endOffset": 250
+                    "startOffset": 264,
+                    "endColumn": 108,
+                    "endOffset": 368
                 },
                 "from": {
-                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\res\\values-it\\strings.xml",
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
                     "position": {
                         "startLine": 6,
-                        "startColumn": 2,
-                        "startOffset": 298,
-                        "endColumn": 77,
-                        "endOffset": 373
+                        "startColumn": 4,
+                        "startOffset": 500,
+                        "endColumn": 108,
+                        "endOffset": 604
                     }
                 }
             },
@@ -63,18 +63,265 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 255,
-                    "endColumn": 98,
-                    "endOffset": 349
+                    "startOffset": 373,
+                    "endColumn": 83,
+                    "endOffset": 452
                 },
                 "from": {
-                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\res\\values-it\\strings.xml",
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 609,
+                        "endColumn": 83,
+                        "endOffset": 688
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 457,
+                    "endColumn": 108,
+                    "endOffset": 561
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 693,
+                        "endColumn": 108,
+                        "endOffset": 797
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 566,
+                    "endColumn": 124,
+                    "endOffset": 686
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 802,
+                        "endColumn": 124,
+                        "endOffset": 922
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 691,
+                    "endColumn": 105,
+                    "endOffset": 792
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 927,
+                        "endColumn": 105,
+                        "endOffset": 1028
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 797,
+                    "endColumn": 107,
+                    "endOffset": 900
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 1033,
+                        "endColumn": 107,
+                        "endOffset": 1136
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 905,
+                    "endColumn": 97,
+                    "endOffset": 998
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 1141,
+                        "endColumn": 97,
+                        "endOffset": 1234
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1003,
+                    "endColumn": 103,
+                    "endOffset": 1102
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1239,
+                        "endColumn": 103,
+                        "endOffset": 1338
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1107,
+                    "endColumn": 104,
+                    "endOffset": 1207
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1343,
+                        "endColumn": 104,
+                        "endOffset": 1443
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1212,
+                    "endColumn": 106,
+                    "endOffset": 1314
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1448,
+                        "endColumn": 106,
+                        "endOffset": 1550
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1319,
+                    "endColumn": 121,
+                    "endOffset": 1436
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-it\\values-it.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1555,
+                        "endColumn": 121,
+                        "endOffset": 1672
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1441,
+                    "endColumn": 59,
+                    "endOffset": 1496
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 2,
+                        "startOffset": 245,
+                        "endColumn": 57,
+                        "endOffset": 300
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1501,
+                    "endColumn": 59,
+                    "endOffset": 1556
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 2,
+                        "startOffset": 88,
+                        "endColumn": 57,
+                        "endOffset": 143
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1561,
+                    "endColumn": 79,
+                    "endOffset": 1636
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\res\\values-it\\strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 2,
+                        "startOffset": 304,
+                        "endColumn": 77,
+                        "endOffset": 379
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1641,
+                    "endColumn": 98,
+                    "endOffset": 1735
+                },
+                "from": {
+                    "file": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\res\\values-it\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 2,
-                        "startOffset": 143,
+                        "startOffset": 147,
                         "endColumn": 96,
-                        "endOffset": 237
+                        "endOffset": 241
                     }
                 }
             }

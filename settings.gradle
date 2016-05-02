@@ -1,2 +1,2 @@
-include ':app'
-include ':libs:aFileChooser'
+include ':app', ':aFileChooser'
+project(':aFileChooser').projectDir = new File('libs/aFileChooser')

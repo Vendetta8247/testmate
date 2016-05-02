@@ -6,19 +6,42 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="ua.com.vendetta8247.testmate.MainActivity"
-    android:background="#F0F">
+    android:background="#FFF">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+            <TextView
+                android:gravity="start|center"
+                android:id="@+id/lessonTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="12pt"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:text="Векторная графика"/>
+            <ImageButton
+                android:id="@+id/action_save"
+                android:layout_gravity="right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:background="?attr/colorPrimary"
+                android:maxHeight="38dp"
+                android:maxWidth="38dp"
+                android:src="@drawable/save_icon" />
+            </android.support.v7.widget.Toolbar>
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -58,11 +81,14 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
                     />
+                <View android:background="#ddd"
+                    android:layout_height="match_parent"
+                    android:layout_width="4px"/>
 
                 <ImageButton
  android:padding = "4dp"
                     android:id="@+id/action_bold"
-                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
+                    android:maxWidth="30dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:contentDescription="@null"
                     android:src="@drawable/bold"
@@ -73,7 +99,7 @@
                 <ImageButton
  android:padding = "4dp"
                     android:id="@+id/action_italic"
-                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
+                    android:maxWidth="30dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:contentDescription="@null"
                     android:src="@drawable/italic"
@@ -84,7 +110,7 @@
                 <ImageButton
                     android:padding = "4dp"
                     android:id="@+id/action_underline"
-                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
+                    android:maxWidth="30dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:contentDescription="@null"
                     android:src="@drawable/underline"
@@ -95,7 +121,7 @@
                 <ImageButton
                     android:padding = "4dp"
                     android:id="@+id/action_strikethrough"
-                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
+                    android:maxWidth="30dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
                     android:background="@null"
                     android:contentDescription="@null"
                     android:src="@drawable/strikethrough"
@@ -103,6 +129,9 @@
                     android:scaleType="fitCenter"
                     />
 
+                <View android:background="#ddd"
+                    android:layout_height="match_parent"
+                    android:layout_width="4px"/>
 
                 <ImageButton
  android:padding = "4dp"
@@ -126,6 +155,9 @@
                     android:scaleType="fitCenter"
                     />
 
+                <View android:background="#ddd"
+                    android:layout_height="match_parent"
+                    android:layout_width="4px"/>
 
                 <ImageButton
  android:padding = "4dp"
@@ -193,6 +225,10 @@
                     android:scaleType="fitCenter"
                     />
 
+                <View android:background="#ddd"
+                    android:layout_height="match_parent"
+                    android:layout_width="4px"/>
+
                 <ImageButton
  android:padding = "4dp"
                     android:id="@+id/action_txt_color"
@@ -215,28 +251,9 @@
                     android:scaleType="fitCenter"
                     />
 
-
-                <ImageButton
- android:padding = "4dp"
-                    android:id="@+id/action_indent"
-                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:contentDescription="@null"
-                    android:src="@drawable/indent"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    />
-
-                <ImageButton
- android:padding = "4dp"
-                    android:id="@+id/action_outdent"
-                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:contentDescription="@null"
-                    android:src="@drawable/outdent"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    />
+                <View android:background="#ddd"
+                    android:layout_height="match_parent"
+                    android:layout_width="4px"/>
 
                 <ImageButton
  android:padding = "4dp"
@@ -270,6 +287,10 @@
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
                     />
+
+                <View android:background="#ddd"
+                    android:layout_height="match_parent"
+                    android:layout_width="4px"/>
                 <ImageButton
  android:padding = "4dp"
                     android:id="@+id/action_insert_image"
@@ -293,16 +314,7 @@
                     />
 
 
-                <ImageButton
- android:padding = "4dp"
-                    android:id="@+id/action_save"
-                    android:maxWidth="50dp"                     android:maxHeight="50dp"                     android:layout_width="wrap_content"                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:contentDescription="@null"
-                    android:src="@drawable/save_icon"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    />
+
 
             </LinearLayout>
         </HorizontalScrollView>

@@ -3,8 +3,8 @@
     package="com.ipaulpro.afilechooser.test" >
 
     <uses-sdk
-        android:minSdkVersion="10"
-        android:targetSdkVersion="18" />
+        android:minSdkVersion="18"
+        android:targetSdkVersion="22" />
 
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"

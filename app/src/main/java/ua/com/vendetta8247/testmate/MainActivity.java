@@ -1,7 +1,9 @@
 package ua.com.vendetta8247.testmate;
 
         import android.content.DialogInterface;
+        import android.content.Intent;
         import android.graphics.Color;
+        import android.net.Uri;
         import android.os.Bundle;
         import android.os.Environment;
         import android.support.v7.app.AlertDialog;
@@ -11,9 +13,16 @@ package ua.com.vendetta8247.testmate;
         import android.widget.EditText;
         import android.widget.TextView;
 
+        import com.ipaulpro.afilechooser.utils.FileUtils;
+
         import java.io.File;
+        import java.io.FileInputStream;
+        import java.io.FileNotFoundException;
+        import java.io.FileOutputStream;
         import java.io.FileWriter;
         import java.io.IOException;
+        import java.io.InputStream;
+        import java.io.OutputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     private TextView mPreview;
     String htmlOutput="";
     String m_text = "";
+    final int REQUEST_CHOOSER = 1228;
+    String imageFilePath = "";
 
 
     @Override protected void onCreate(Bundle savedInstanceState) {
@@ -152,17 +163,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.action_indent).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                mEditor.setIndent();
-            }
-        });
-
-        findViewById(R.id.action_outdent).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-                mEditor.setOutdent();
-            }
-        });
 
         findViewById(R.id.action_align_left).setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
@@ -184,11 +184,15 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.action_insert_image).setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
+                File sdCard = Environment.getExternalStorageDirectory();
+                File dest = new File(sdCard.getAbsolutePath() + "/TestMate/Editing/");
 
 
+                Intent getContentIntent = FileUtils.createGetContentIntent();
 
-                mEditor.insertImage("http://www.1honeywan.com/dachshund/image/7.21/7.21_3_thumb.JPG",
-                        "dachshund");
+                Intent intent = Intent.createChooser(getContentIntent, "Select a file");
+                startActivityForResult(intent, REQUEST_CHOOSER);
+                System.out.println("IMAGE FILE PATH" + imageFilePath);
             }
         });
 
@@ -316,5 +320,48 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case REQUEST_CHOOSER:
+                if (resultCode == RESULT_OK) {
+
+                    final Uri uri = data.getData();
+                    imageFilePath = FileUtils.getPath(this, uri);
+                    InputStream inStream = null;
+                    OutputStream outStream = null;
+
+                    try{
+
+                        File afile =new File(imageFilePath);
+                        File bfile =new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/TestMate/Editing/img.png");
+
+                        inStream = new FileInputStream(afile);
+                        outStream = new FileOutputStream(bfile);
+
+                        byte[] buffer = new byte[1024];
+
+                        int length;
+                        while ((length = inStream.read(buffer)) > 0){
+
+                            outStream.write(buffer, 0, length);
+
+                        }
+
+                        inStream.close();
+                        outStream.close();
+
+                        System.out.println("File is copied successfully!");
+
+                    }catch(IOException e){
+                        e.printStackTrace();
+                    }
+
+                    System.out.println("IMAGE FILE PATH" + imageFilePath);
+                    mEditor.insertImage(Environment.getExternalStorageDirectory().getAbsolutePath() + "/TestMate/Editing/img.png", "");
+                }
+                break;
+        }
     }
 }
