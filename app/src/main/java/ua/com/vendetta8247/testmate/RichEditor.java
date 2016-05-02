@@ -235,8 +235,8 @@ public class RichEditor extends WebView {
         exec("javascript:RE.setBackgroundImage('url(" + url + ")');");
     }
 
-    public void setEditorWidth(int px) {
-        exec("javascript:RE.setWidth('" + px + "px');");
+    public void setEditorWidth(int percent) {
+        exec("javascript:RE.setWidth('" + percent + "%');");
     }
 
     public void setEditorHeight(int px) {

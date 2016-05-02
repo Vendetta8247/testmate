@@ -54,6 +54,7 @@ public class MainScreen extends AppCompatActivity {
         super.onResume();
         RecyclerView rw = (RecyclerView) findViewById(R.id.contentList);
 
+        System.out.println("BYTE SIZE" );
 
 
         rw.setAdapter(adapter);
@@ -64,6 +65,7 @@ public class MainScreen extends AppCompatActivity {
         if (!dir.exists())
             dir.mkdir();
         for (int i = 0; i < dir.listFiles().length; i++)
+            if(!dir.listFiles()[i].isDirectory())
             adapter.addItem(new MainCard1(dir.listFiles()[i].getName(), dir.listFiles()[i].getAbsolutePath()));
 
         LinearLayoutManager llm = new LinearLayoutManager(this);

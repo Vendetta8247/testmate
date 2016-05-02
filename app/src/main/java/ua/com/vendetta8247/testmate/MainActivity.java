@@ -11,6 +11,8 @@ package ua.com.vendetta8247.testmate;
         import android.text.InputType;
         import android.view.View;
         import android.widget.EditText;
+        import android.widget.LinearLayout;
+        import android.widget.ListView;
         import android.widget.TextView;
 
         import com.ipaulpro.afilechooser.utils.FileUtils;
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mEditor = (RichEditor) findViewById(R.id.editor);
-       // mEditor.setEditorHeight(600);
+        mEditor.setEditorHeight(600);
         mEditor.setEditorFontSize(22);
         mEditor.setEditorFontColor(R.color.blackFont);
         //mEditor.setEditorBackgroundColor(Color.BLUE);
@@ -199,39 +201,36 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.action_insert_link).setOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                builder.setTitle("URL");
+                builder.setTitle("Add a Link");
 
                 final String[] m_string = new String[2];
+                final LinearLayout ll = new LinearLayout(v.getContext());
+                ll.setOrientation(LinearLayout.VERTICAL);
                 final EditText input = new EditText(v.getContext());
                 input.setInputType(InputType.TYPE_CLASS_TEXT);
-                builder.setView(input);
+                input.setTextColor(0xff000000);
+                final EditText input2 = new EditText(v.getContext());
+                input2.setInputType(InputType.TYPE_CLASS_TEXT);
+                input2.setTextColor(0xff000000);
+                TextView text1 = new TextView(v.getContext());
+                text1.setText("Link address");
+                text1.setTextColor(0xff000000);
+                TextView text2 = new TextView(v.getContext());
+                text2.setText("Link name");
+                text2.setTextColor(0xff000000);
+                ll.addView(text1);
+                ll.addView(input);
+                ll.addView(text2);
+                ll.addView(input2);
+                builder.setView(ll);
 
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         m_string[0] = input.getText().toString();
-                    }
-                });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-
-                builder.show();
-
-                builder = new AlertDialog.Builder(v.getContext());
-                builder.setTitle("Link name");
-
-                final EditText input2 = new EditText(v.getContext());
-                input2.setInputType(InputType.TYPE_CLASS_TEXT);
-                builder.setView(input2);
-
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
                         m_string[1] = input2.getText().toString();
+                        if(!m_string[0].contains("http://")) m_string[0] = "http://" + m_string[0];
+                        mEditor.insertLink(m_string[0], m_string[1]);
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -243,7 +242,32 @@ public class MainActivity extends AppCompatActivity {
 
                 builder.show();
 
-                mEditor.insertLink(m_string[0], m_string[1]);
+
+//                AlertDialog.Builder builder2 = new AlertDialog.Builder(v.getContext());
+//                builder2 = new AlertDialog.Builder(v.getContext());
+//                builder2.setTitle("Link name");
+//
+//                final EditText input2 = new EditText(v.getContext());
+//                input2.setInputType(InputType.TYPE_CLASS_TEXT);
+//                builder2.setView(input2);
+//
+//                builder2.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        m_string[1] = input2.getText().toString();
+//
+//                    }
+//                });
+//                builder2.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.cancel();
+//                    }
+//                });
+//
+//                builder2.show();
+
+
             }
         });
         findViewById(R.id.action_save).setOnClickListener(new View.OnClickListener() {
@@ -331,11 +355,15 @@ public class MainActivity extends AppCompatActivity {
                     imageFilePath = FileUtils.getPath(this, uri);
                     InputStream inStream = null;
                     OutputStream outStream = null;
+                    String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/TestMate/Editing/";
 
                     try{
 
                         File afile =new File(imageFilePath);
-                        File bfile =new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/TestMate/Editing/img.png");
+                        File dir = new File(path);
+                        if(!dir.exists())
+                            dir.mkdir();
+                        File bfile =new File(path + "img.png");
 
                         inStream = new FileInputStream(afile);
                         outStream = new FileOutputStream(bfile);
