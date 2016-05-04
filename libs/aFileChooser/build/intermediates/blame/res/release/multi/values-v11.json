@@ -1,5 +1,378 @@
 [
     {
+        "outputFile": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\res\\merged\\release\\values-v11\\values-v11.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 53,
+                    "endOffset": 104
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\res\\values-v11\\strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 658,
+                        "endColumn": 53,
+                        "endOffset": 707
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 109,
+                    "endLine": 8,
+                    "endColumn": 12,
+                    "endOffset": 523
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 301,
+                        "endLine": 9,
+                        "endColumn": 12,
+                        "endOffset": 715
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 528,
+                    "endLine": 14,
+                    "endColumn": 12,
+                    "endOffset": 948
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 720,
+                        "endLine": 15,
+                        "endColumn": 12,
+                        "endOffset": 1140
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 953,
+                    "endLine": 20,
+                    "endColumn": 12,
+                    "endOffset": 1376
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1145,
+                        "endLine": 21,
+                        "endColumn": 12,
+                        "endOffset": 1568
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1381,
+                    "endLine": 26,
+                    "endColumn": 12,
+                    "endOffset": 1802
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 1573,
+                        "endLine": 27,
+                        "endColumn": 12,
+                        "endOffset": 1994
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1807,
+                    "endLine": 32,
+                    "endColumn": 12,
+                    "endOffset": 2231
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 4,
+                        "startOffset": 1999,
+                        "endLine": 33,
+                        "endColumn": 12,
+                        "endOffset": 2423
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 33,
+                    "startColumn": 4,
+                    "startOffset": 2236,
+                    "endLine": 38,
+                    "endColumn": 12,
+                    "endOffset": 2656
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 4,
+                        "startOffset": 2428,
+                        "endLine": 39,
+                        "endColumn": 12,
+                        "endOffset": 2848
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 2661,
+                    "endColumn": 88,
+                    "endOffset": 2745
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 4,
+                        "startOffset": 3094,
+                        "endColumn": 88,
+                        "endOffset": 3178
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 2750,
+                    "endColumn": 100,
+                    "endOffset": 2846
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 4,
+                        "startOffset": 3183,
+                        "endColumn": 100,
+                        "endOffset": 3279
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 2851,
+                    "endLine": 45,
+                    "endColumn": 12,
+                    "endOffset": 3254
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 4,
+                        "startOffset": 3284,
+                        "endLine": 48,
+                        "endColumn": 12,
+                        "endOffset": 3687
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 3259,
+                    "endLine": 50,
+                    "endColumn": 12,
+                    "endOffset": 3674
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 4,
+                        "startOffset": 3692,
+                        "endLine": 53,
+                        "endColumn": 12,
+                        "endOffset": 4107
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 51,
+                    "startColumn": 4,
+                    "startOffset": 3679,
+                    "endLine": 52,
+                    "endColumn": 12,
+                    "endOffset": 3781
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 4,
+                        "startOffset": 4353,
+                        "endLine": 57,
+                        "endColumn": 12,
+                        "endOffset": 4455
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 53,
+                    "startColumn": 4,
+                    "startOffset": 3786,
+                    "endLine": 54,
+                    "endColumn": 12,
+                    "endOffset": 3910
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 4,
+                        "startOffset": 4460,
+                        "endLine": 59,
+                        "endColumn": 12,
+                        "endOffset": 4584
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 55,
+                    "startColumn": 4,
+                    "startOffset": 3915,
+                    "endLine": 59,
+                    "endColumn": 12,
+                    "endOffset": 4274
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 4,
+                        "startOffset": 4589,
+                        "endLine": 64,
+                        "endColumn": 12,
+                        "endOffset": 4948
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 60,
+                    "startColumn": 4,
+                    "startOffset": 4279,
+                    "endColumn": 70,
+                    "endOffset": 4345
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 67,
+                        "startColumn": 4,
+                        "startOffset": 5194,
+                        "endColumn": 70,
+                        "endOffset": 5260
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 61,
+                    "startColumn": 4,
+                    "startOffset": 4350,
+                    "endColumn": 82,
+                    "endOffset": 4428
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 4,
+                        "startOffset": 5265,
+                        "endColumn": 82,
+                        "endOffset": 5343
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 62,
+                    "startColumn": 4,
+                    "startOffset": 4433,
+                    "endLine": 112,
+                    "endColumn": 12,
+                    "endOffset": 8177
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 5348,
+                        "endLine": 119,
+                        "endColumn": 12,
+                        "endOffset": 9092
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 113,
+                    "startColumn": 4,
+                    "startOffset": 8182,
+                    "endLine": 164,
+                    "endColumn": 12,
+                    "endOffset": 12066
+                },
+                "from": {
+                    "file": "C:\\Users\\Admin\\StudioProjects\\testmate\\libs\\aFileChooser\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.1\\res\\values-v11\\values-v11.xml",
+                    "position": {
+                        "startLine": 120,
+                        "startColumn": 4,
+                        "startOffset": 9097,
+                        "endLine": 171,
+                        "endColumn": 12,
+                        "endOffset": 12981
+                    }
+                }
+            }
+        ]
+    },
+    {
         "outputFile": "E:\\PROJECTS\\TestMate\\testmate\\libs\\aFileChooser\\build\\intermediates\\res\\merged\\release\\values-v11\\values-v11.xml",
         "map": [
             {

@@ -271,7 +271,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         findViewById(R.id.action_save).setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
+            @Override public void onClick(final View v) {
                 System.out.println(m_text.length());
 
                 if (m_text.length() == 0) {
@@ -290,12 +290,12 @@ public class MainActivity extends AppCompatActivity {
                         public void onClick(DialogInterface dialog, int which) {
                             m_text = input.getText().toString();
 
-                            File sdCard = Environment.getExternalStorageDirectory();
-                            File dir = new File(sdCard.getAbsolutePath() + "/TestMate");
+                            File sdCard = v.getContext().getFilesDir();
+                            File dir = new File(sdCard.getAbsolutePath() + "/TestMate/Editing/");
                             if (!dir.exists())
-                                dir.mkdirs();
-                            File f = new File(sdCard.getAbsolutePath() + "/TestMate/" + m_text);
-                            System.out.println(sdCard.getAbsolutePath() + "/TestMate/" + m_text);
+                                dir.mkdir() ;
+                            File f = new File(dir + m_text);
+                            System.out.println(dir + m_text);
                             try {
                                 if (htmlOutput.length() != 0) {
                                     FileWriter fw = new FileWriter(f);
@@ -306,6 +306,8 @@ public class MainActivity extends AppCompatActivity {
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
+
+
                         }
                     });
                     builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -322,8 +324,9 @@ public class MainActivity extends AppCompatActivity {
 
                 else
                 {
-                    File sdCard = Environment.getExternalStorageDirectory();
-                    File dir = new File(sdCard.getAbsolutePath() + "/TestMate");
+                    File sdCard = v.getContext().getFilesDir();
+                    File dir = new File(sdCard.getAbsolutePath() + "/TestMate/Editing");
+
                     if (!dir.exists())
                         dir.mkdirs();
                     File f = new File(sdCard.getAbsolutePath() + "/TestMate/" + m_text);

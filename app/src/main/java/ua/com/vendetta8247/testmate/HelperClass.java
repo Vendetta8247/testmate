@@ -1,3 +1,5 @@
+package ua.com.vendetta8247.testmate;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -25,11 +27,8 @@ public class HelperClass {
             ZipOutputStream zos = new ZipOutputStream(fos);
 
             for (int i=0; i < srcFiles.length; i++) {
-
                 File srcFile = new File(srcFiles[i]);
-
                 FileInputStream fis = new FileInputStream(srcFile);
-
                 // begin writing a new ZIP entry, positions the stream to the start of the entry data
                 zos.putNextEntry(new ZipEntry(srcFile.getName()));
 

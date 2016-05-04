@@ -1,8 +1,7 @@
-import java.io.*;
-import java.lang.management.ManagementFactory;
-import java.util.List;
+package ua.com.vendetta8247.testmate;
 
-import com.sun.management.OperatingSystemMXBean;
+import java.io.*;
+import java.util.List;
 
 
 public class Main {
